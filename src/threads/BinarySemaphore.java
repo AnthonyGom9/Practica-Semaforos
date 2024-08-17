@@ -1,3 +1,5 @@
+package threads;
+
 public class BinarySemaphore {
     private boolean signal = false; // Estado del semáforo
 
