@@ -6,8 +6,9 @@ import threads.BinarySemaphore;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException{
-        Contador contador = new Contador();
+    public static void main(String[] args) throws InterruptedException {
+        BinarySemaphore semaphore = new BinarySemaphore();
+        Contador contador = new Contador(semaphore);
 
         Runnable tarea1 = new HiloContador(contador);
         Runnable tarea2 = new HiloContador(contador);
